@@ -1,12 +1,20 @@
 const express = require("express");
+const globalRouter = require("./routers/index");
 
 const app = express();
-const port = 3000;
+const PORT = 8080;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.use(express.json());
+
+app.use(globalRouter);
+
+app.use((err, req, res, next) => {
+  console.log(err);
+  res.status(err.statusCode || 500).send(err);
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+const handleListen = () => {
+  console.log(`Server listening at: http://localhost:${PORT}`);
+};
+
+app.listen(PORT, handleListen);
