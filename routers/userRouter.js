@@ -2,7 +2,6 @@ import { Router } from "express";
 import validate from "../middlewares/param.validate";
 const router = Router();
 
-router.get("/", (req, res) => {
-  print("Hello");
-});
+router.post("/login", auth.login);
+router.post("/register", auth.login);
 export default router;
