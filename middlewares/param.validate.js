@@ -1,4 +1,4 @@
-/*import { validationResult } from "express-validator/src/validation-result";
+import { validationResult } from "express-validator/src/validation-result";
 import httpStatus from "http-status";
 
 const validate = (req, res, next) => {
@@ -12,4 +12,3 @@ const validate = (req, res, next) => {
 };
 //유효성검증
 export default validate;
-*/
