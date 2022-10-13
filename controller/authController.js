@@ -1,6 +1,7 @@
 import nodemailer from "nodemailer";
 import ejs from "ejs";
 import path from "path";
+import { nextTick } from "process";
 
 require("dotenv").config();
 
@@ -43,10 +44,15 @@ const mail = async (req, res) => {
     console.log("Finish sending email");
     res.send(authNum);
     transporter.close();
+    mailAuth(authNum);
   });
 };
+const mailAuth = async (req, res) => {
+  res.send(authNum);
+};
 const register = async (req, res) => {};
-
+//인증번호 : authNum
 export default {
   mail,
+  mailAuth,
 };
