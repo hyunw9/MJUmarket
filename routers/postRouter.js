@@ -1,5 +1,5 @@
 import { Router } from "express";
-import auth from "../controller/userController";
+import auth from "../controller/userController.js";
 const router = Router();
 
 //router.get("/list", post);

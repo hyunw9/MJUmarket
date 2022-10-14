@@ -1,12 +1,14 @@
-const express = require("express");
-const globalRouter = require("./routers/index");
-
+/*const express = require("express");
+const globalRouter = require("./routers/index");*/
+import express from "express";
+import globalRouter from "./routers/index.js";
 const app = express();
 const PORT = 8080;
 
 app.use(express.json());
 
 app.use(globalRouter);
+//lowdb 선언
 
 app.use((err, req, res, next) => {
   console.log(err);

@@ -1,0 +1,59 @@
+{
+  "user": [
+    {
+      "id": 0,
+      "username": "JohnDoe",
+      "email": "rkdgusdnr32@naver.com",
+      "password": "nono",
+      "major": "CS"
+    },
+    {
+      "id": 0,
+      "username": "rkdgusdnr32",
+      "email": "nadomola",
+      "major": "cse"
+    },
+    {
+      "id": 0,
+      "username": "rkdgusdnr32",
+      "email": "nadomola",
+      "major": "cse"
+    },
+    {
+      "id": 0,
+      "username": "rkdgusdnr32",
+      "email": "nadomola",
+      "major": "cse"
+    },
+    {
+      "id": 0,
+      "username": "rkdgusdnr32",
+      "email": "nadomola",
+      "major": "cse"
+    },
+    {
+      "id": 0,
+      "username": "rkdgusdnr32",
+      "email": "nadomola",
+      "major": "cse"
+    },
+    {
+      "id": 0,
+      "username": "rkdgusdnr32",
+      "email": "nadomola",
+      "major": "cse"
+    }
+  ],
+  "post": [
+    {
+      "id": 0,
+      "major": "CS",
+      "username": "JohnDoe",
+      "title": "hi first article",
+      "paragraph": "loream ipsum",
+      "status": "done"
+    }
+  ],
+  "Users": [],
+  "Posts": []
+}

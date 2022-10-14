@@ -2,7 +2,11 @@ import nodemailer from "nodemailer";
 import ejs from "ejs";
 import path from "path";
 import { nextTick } from "process";
+const low = require("lowdb");
+const FileSync = require("lowdb/adapters/FileSync");
+const adapter = new FileSync("db/db.json");
 
+const db = low(adapter);
 require("dotenv").config();
 
 var appDir = path.dirname(require.main.filename);
@@ -44,15 +48,27 @@ const mail = async (req, res) => {
     console.log("Finish sending email");
     res.send(authNum);
     transporter.close();
-    mailAuth(authNum);
   });
 };
-const mailAuth = async (req, res) => {
-  res.send(authNum);
+/*const mailAuth = async (req, res) => {
+  console.log(authNum);
+  //클라이언트에서 가능하다고 하면 개발
+};*/
+const register = async (req, res) => {
+  let { username, email, pw, major } = req.body;
+
+  let newUser = {
+    id: 0, //자동생성 되어야함
+    username: username,
+    email: email,
+    password: pw,
+    major: major,
+  };
+  db.get("user").push(newUser).write();
+  res.json(db.get("user").find({ email: email }).value());
 };
-const register = async (req, res) => {};
-//인증번호 : authNum
+
 export default {
   mail,
-  mailAuth,
+  register,
 };
