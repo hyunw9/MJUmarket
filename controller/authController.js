@@ -2,11 +2,13 @@ import nodemailer from "nodemailer";
 import ejs from "ejs";
 import path from "path";
 import { nextTick } from "process";
+const shortId = require("shortid");
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db/db.json");
 
 const db = low(adapter);
+
 require("dotenv").config();
 
 var appDir = path.dirname(require.main.filename);
@@ -56,16 +58,16 @@ const mail = async (req, res) => {
 };*/
 const register = async (req, res) => {
   let { username, email, pw, major } = req.body;
-
+  let sid = shortId.generate();
   let newUser = {
-    id: 0, //자동생성 되어야함
+    id: sid, //자동생성 되어야함
     username: username,
     email: email,
     password: pw,
     major: major,
   };
   db.get("user").push(newUser).write();
-  res.json(db.get("user").find({ email: email }).value());
+  res.json(db.get("user").find({ id: sid }).value());
 };
 
 export default {
