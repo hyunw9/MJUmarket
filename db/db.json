@@ -1,44 +1,7 @@
 {
   "user": [
     {
-      "id": 0,
-      "username": "JohnDoe",
-      "email": "rkdgusdnr32@naver.com",
-      "password": "nono",
-      "major": "CS"
-    },
-    {
-      "id": 0,
-      "username": "rkdgusdnr32",
-      "email": "nadomola",
-      "major": "cse"
-    },
-    {
-      "id": 0,
-      "username": "rkdgusdnr32",
-      "email": "nadomola",
-      "major": "cse"
-    },
-    {
-      "id": 0,
-      "username": "rkdgusdnr32",
-      "email": "nadomola",
-      "major": "cse"
-    },
-    {
-      "id": 0,
-      "username": "rkdgusdnr32",
-      "email": "nadomola",
-      "major": "cse"
-    },
-    {
-      "id": 0,
-      "username": "rkdgusdnr32",
-      "email": "nadomola",
-      "major": "cse"
-    },
-    {
-      "id": 0,
+      "id": "wArkp1BHX",
       "username": "rkdgusdnr32",
       "email": "nadomola",
       "major": "cse"
@@ -53,7 +16,5 @@
       "paragraph": "loream ipsum",
       "status": "done"
     }
-  ],
-  "Users": [],
-  "Posts": []
+  ]
 }
