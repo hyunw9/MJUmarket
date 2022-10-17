@@ -2,12 +2,14 @@ import nodemailer from "nodemailer";
 import ejs from "ejs";
 import path from "path";
 import { nextTick } from "process";
-const shortId = require("shortid");
+import { findvalue } from "../function/find";
+
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db/db.json");
 
 const db = low(adapter);
+let sid = 0;
 
 require("dotenv").config();
 
@@ -52,25 +54,52 @@ const mail = async (req, res) => {
     transporter.close();
   });
 };
-/*const mailAuth = async (req, res) => {
-  console.log(authNum);
-  //클라이언트에서 가능하다고 하면 개발
-};*/
+
 const register = async (req, res) => {
-  let { username, email, pw, major } = req.body;
-  let sid = shortId.generate();
+  let { username, email, password, major } = req.body;
+
   let newUser = {
-    id: sid, //자동생성 되어야함
+    id: sid,
     username: username,
     email: email,
-    password: pw,
+    password: password,
     major: major,
+    posts: [],
   };
+
   db.get("user").push(newUser).write();
   res.json(db.get("user").find({ id: sid }).value());
+  sid += 1;
+};
+
+const login = async (req, res) => {
+  let { email, password } = req.body;
+  if (
+    db.get("user").find({ email: email, password: password }).value()?.email ==
+    undefined
+  ) {
+    res.json({
+      status: "failed",
+    });
+  } else {
+    res.json({
+      status: "success",
+    });
+  }
+  /*} else {
+      res.json({
+        status: "failed",
+      });
+    }
+  } else {
+    res.json({
+      status: "failed",
+    });
+  }*/
 };
 
 export default {
   mail,
   register,
+  login,
 };

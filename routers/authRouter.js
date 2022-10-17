@@ -7,6 +7,6 @@ const router = Router();
 router.post("/register", authController.register);
 
 router.post("/register/mail", authController.mail);
-
+router.post("/login", authController.login);
 //router.post("/mailAuth", body("key").exist(), authController.mailAuth);
 export default router;

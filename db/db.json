@@ -1,10 +1,12 @@
 {
   "user": [
     {
-      "id": "wArkp1BHX",
-      "username": "rkdgusdnr32",
-      "email": "nadomola",
-      "major": "cse"
+      "id": 0,
+      "username": "test2",
+      "email": "rkdgudsdnr32@naver.com",
+      "password": "pw2",
+      "major": "cdase",
+      "posts": []
     }
   ],
   "post": [
