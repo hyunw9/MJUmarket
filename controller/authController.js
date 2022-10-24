@@ -86,16 +86,6 @@ const login = async (req, res) => {
       status: "success",
     });
   }
-  /*} else {
-      res.json({
-        status: "failed",
-      });
-    }
-  } else {
-    res.json({
-      status: "failed",
-    });
-  }*/
 };
 
 export default {

@@ -7,6 +7,14 @@
       "password": "pw2",
       "major": "cdase",
       "posts": []
+    },
+    {
+      "id": 0,
+      "username": "test2",
+      "email": "rkdgdudsdnr32@naver.com",
+      "password": "pw2",
+      "major": "cdase",
+      "posts": []
     }
   ],
   "post": [
