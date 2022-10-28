@@ -2,29 +2,21 @@
   "user": [
     {
       "id": 0,
-      "username": "test2",
-      "email": "rkdgudsdnr32@naver.com",
-      "password": "pw2",
-      "major": "cdase",
-      "posts": []
-    },
-    {
-      "id": 0,
-      "username": "test2",
-      "email": "rkdgdudsdnr32@naver.com",
-      "password": "pw2",
-      "major": "cdase",
-      "posts": []
+      "username": "김ㅇ철중",
+      "email": "tesㅇt1@mju.ac.kr",
+      "password": "pw1ㅇ",
+      "posts": [
+      ]
     }
   ],
   "post": [
     {
       "id": 0,
-      "major": "CS",
-      "username": "JohnDoe",
-      "title": "hi first article",
-      "paragraph": "loream ipsum",
-      "status": "done"
+      "title": "me",
+      "username": "김ㅇ철중",
+      "paragraph": "emial",
+      "status": 0
     }
+
   ]
 }
