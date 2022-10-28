@@ -14,8 +14,8 @@ app.use((err, req, res, next) => {
   console.log(err);
   res.status(err.statusCode || 500).send(err);
 });
-app.get("/", (req, res) => {
-  res.send("Hello");
+app.get("/test", (req, res) => {
+  res.json("ok");
 });
 const handleListen = () => {
   console.log(`Server listening at: http://localhost:${PORT}`);
