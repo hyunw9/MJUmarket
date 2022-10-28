@@ -2,6 +2,7 @@
 const globalRouter = require("./routers/index");*/
 import express from "express";
 import globalRouter from "./routers/index.js";
+import cors from "cors";
 const app = express();
 const PORT = 8080;
 
