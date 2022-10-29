@@ -81,7 +81,7 @@ const login = async (req, res, next) => {
 
   if (user?.email == email) {
     if (user?.password == password) {
-      next();
+      res.send("success");
     } else {
       res.send("pw failed");
     }
