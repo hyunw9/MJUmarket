@@ -38,6 +38,9 @@ const mail = async (req, res) => {
       pass: process.env.NODEMAILER_PASS,
     },
   });
+  if (req.body.mail == undefined) {
+    res.json("이메일이 없습니다");
+  }
   let mailOptions = await transporter.sendMail({
     from: "rkdgusdnr32@naver.com",
     to: req.body.mail,
