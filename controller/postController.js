@@ -5,10 +5,12 @@ const adapter = new FileSync("db/db.json");
 
 const db = low(adapter);
 const get = async (req, res) => {
-  const email = req.body;
-  const { postTitle } = db.get("post").get("postTitle");
-  console.log(postTitle);
-};
+
+  console.log("넘어갔습니다");
+  const paragraph = db.get("post").value();
+  console.log(paragraph);
+  res.json(paragraph);
+}; //제발 되어라
 const post = async (req, res) => {
   // 0 == yet, 1 == progress, 2 == done
   const { postTitle, postBody, id, price } = req.body;
