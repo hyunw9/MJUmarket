@@ -5,6 +5,7 @@ const adapter = new FileSync("db/db.json");
 
 const db = low(adapter);
 const get = async (req, res) => {
+
   console.log("넘어갔습니다");
   const paragraph = db.get("post").value();
   console.log(paragraph);
