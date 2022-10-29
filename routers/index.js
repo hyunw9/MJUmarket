@@ -8,5 +8,5 @@ router.use("/post", postRouter);
 router.use("/auth", authRouter);
 router.use("/get", async (req, res) => {
   res.send("Hello");
-});
+}); //걍넣은거
 export default router;
