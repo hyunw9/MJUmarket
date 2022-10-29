@@ -5,8 +5,15 @@
       "username": "김ㅇ철중",
       "email": "tesㅇt1@mju.ac.kr",
       "password": "pw1ㅇ",
-      "posts": [
-      ]
+      "posts": []
+    },
+    {
+      "id": 0,
+      "username": "김수한무",
+      "email": "test1@mju.ac.kr",
+      "password": "test1",
+      "major": "컴퓨터공학과",
+      "posts": []
     }
   ],
   "post": [
@@ -17,6 +24,5 @@
       "paragraph": "emial",
       "status": 0
     }
-
   ]
 }
