@@ -4,7 +4,11 @@ const FileSync = require("lowdb/adapters/FileSync");
 const adapter = new FileSync("db/db.json");
 
 const db = low(adapter);
-const get = async (req, res) => {};
+const get = async (req, res) => {
+  const email = req.body;
+  const { postTitle } = db.get("post").get("postTitle");
+  console.log(postTitle);
+};
 const post = async (req, res) => {
   // 0 == yet, 1 == progress, 2 == done
   const { postTitle, postBody, id, price } = req.body;
@@ -25,6 +29,7 @@ const post = async (req, res) => {
   res.json(db.get("post").find({ id: pid }).value());
   pid += 1;
 };
+
 export default {
   post,
   get,

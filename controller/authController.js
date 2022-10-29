@@ -72,8 +72,20 @@ const register = async (req, res) => {
   sid += 1;
 };
 
-const login = async (req, res) => {
+const login = async (req, res, next) => {
   let { email, password } = req.body;
+
+  if (db.get("user").find({ email }).value().email == email) {
+    if ((db.get("user").find({ email }).value().password = password)) {
+      res.send("success");
+    } else {
+      res.send("pw failed");
+    }
+  } else {
+    res.send("pw failed");
+  }
+
+  /*
   if (
     db.get("user").find({ email: email, password: password }).value()?.email ==
     undefined
@@ -82,10 +94,11 @@ const login = async (req, res) => {
       status: "failed",
     });
   } else {
-    res.json({
+    next();
+    /*res.json({
       status: "success",
-    });
-  }
+    })
+  }*/
 };
 
 export default {
