@@ -74,15 +74,16 @@ const register = async (req, res) => {
 
 const login = async (req, res, next) => {
   let { email, password } = req.body;
+  let user = db.get("user").find({ email: email }).value();
 
-  if (db.get("user").find({ email }).value().email == email) {
-    if ((db.get("user").find({ email }).value().password = password)) {
+  if (user?.email == email) {
+    if (user?.password == password) {
       res.send("success");
     } else {
       res.send("pw failed");
     }
   } else {
-    res.send("pw failed");
+    res.send("id failed");
   }
 
   /*
