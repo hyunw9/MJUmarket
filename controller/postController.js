@@ -10,6 +10,7 @@ const get = async (req, res) => {
   console.log(paragraph);
   res.json(paragraph);
 };
+
 const post = async (req, res) => {
   // 0 == yet, 1 == progress, 2 == done
   const { postTitle, postBody, id, price } = req.body;

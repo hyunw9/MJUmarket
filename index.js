@@ -13,6 +13,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:8080",
       "ec2-3-38-210-186.ap-northeast-2.compute.amazonaws.com",
+      "ec2-3-35-149-126.ap-northeast-2.compute.amazonaws.com:8080",
     ],
   })
 );
